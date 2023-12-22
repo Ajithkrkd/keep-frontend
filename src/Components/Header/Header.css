@@ -1,0 +1,46 @@
+.header{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 7px;
+    /* background-color: red; */
+}
+.keep-img{
+    height: 40px;
+}
+
+.searchBar{
+    background-color: #F1F3F4;
+    padding:10px;
+    border-radius: 10px;
+}
+.searchIcon{
+    font-size: 25px;
+}
+.searchBar input{
+    border: none;
+    font-size: 19px;
+    background-color: #F1F3F4;
+    
+}
+.searchBar input:focus {
+    outline: none;
+  }
+.searchIcon{
+    padding-right:20px;
+    align-content: center;
+    opacity: 0.5;
+}
+.closeIcon{
+    float: right;
+    font-size: 30px;
+    opacity: 0.5;
+}
+.keep-text{
+    margin-right: 30px;
+    margin-top: 10px;
+    font-weight: 600;
+    opacity: .7;
+}
+.btnx{
+    margin-right: 20px;
+    margin-left: 20px;
+}
