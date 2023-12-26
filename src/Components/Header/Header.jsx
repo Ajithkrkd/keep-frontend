@@ -21,13 +21,14 @@ function Header() {
         <input type="text"  placeholder="search"/>
         <i className="bx bx-x closeIcon"></i>
       </div>
+      <div className=" d-flex align-items-center  last-section">
+      <i className="bx bx-refresh"></i>
+      <i className="bx bx-grid-alt"></i>
+      <i className="bx bx-cog"></i>
+      <img rel="profile picture" className="profile" src='/src/assets/keep_2020q4_48dp.png' />
      </div>
-     <div>
-      <i className="bx bx-menu"></i>
-      <i></i>
-      <i></i>
-      <i></i>
      </div>
+   
      
     </div>
   );

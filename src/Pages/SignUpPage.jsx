@@ -1,14 +1,14 @@
 import React from 'react'
 import Header from '../Components/Header/Header'
-import Login from '../Components/LoginFolder/Login'
+import SignUp from '../Components/SignUpFolder/SignUp'
 
-function loginPage() {
+function SignUpPage() {
   return (
     <div>
         <Header/>
-        <Login/>
+        <SignUp/>
     </div>
   )
 }
 
-export default loginPage
+export default SignUpPage

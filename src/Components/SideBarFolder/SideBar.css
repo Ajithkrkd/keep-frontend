@@ -34,10 +34,15 @@
  
 }
 
-.sidebar.open{
+.sidebar.open {
   width: 320px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
+}
+
+.home {
+  margin-left: 90px;
+  transition: margin-left 0.5s; 
 }
 
 .sidebar .logo_details{
