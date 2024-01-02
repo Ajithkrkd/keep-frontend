@@ -3,7 +3,7 @@
 :root{
   --color-default:#fff;
   --color-second:#fff;
-  --color-yellow:#FEEFC3;
+  --color-yellow:#ded8f1;
   --color-body:#e4e9f7;
   --color-light:#e0e0e0;
   --color-black:#111;
@@ -31,11 +31,12 @@
   position: fixed;
   top:0;
   left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
  
 }
 
 .sidebar.open {
-  width: 320px;
+  width: 310px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
 }

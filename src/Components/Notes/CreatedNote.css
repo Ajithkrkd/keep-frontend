@@ -1,0 +1,63 @@
+/* CreatedNote.css */
+
+* {
+    margin: 0;
+/* Include padding and border in the element's total width and height */
+}
+
+.notes {
+   
+    margin-left: 100px;
+}
+
+.note {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 300px;
+    min-height: 160px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* .note:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+
+/* CreatedNote.css */
+
+
+  
+
+.iconList  {
+    display: none;
+    justify-content: space-between;
+    align-items: baseline; /* Align items along the baseline */
+    margin: 0;
+    
+}
+
+.iconList li{
+   padding: 7px;
+   transition: 0.15s;
+   list-style: none;
+}
+ .iconList li:hover{
+    background-color: rgb(224, 217, 217);
+    border-radius: 20px;
+    display: flex;
+    padding: 7px;
+    cursor: pointer;
+}
+
+
+  .note:hover{
+    transform: scale(1.03);
+  }
+  .note:hover .iconList {
+   
+    display: flex;
+   
+  }

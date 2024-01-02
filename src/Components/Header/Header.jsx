@@ -14,8 +14,8 @@ function Header() {
      <div className="" >
         <i className="bx bx-menu btnx" style={{ fontSize: '27px' }}></i>
       </div>
-      <img src='/src/assets/keep_2020q4_48dp.png' className="keep-img" rel="keep logo"/>
-      <h5 className="keep-text">Keep</h5>
+      <img src='/src/assets/brain.png.avif' className="keep-img" rel="keep logo"/>
+      <h5 className="keep-text">BrainSync</h5>
       <div className="searchBar">
         <i className="bx bx-search searchIcon"></i>
         <input type="text"  placeholder="search"/>
