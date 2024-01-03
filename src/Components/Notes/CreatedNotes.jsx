@@ -1,36 +1,40 @@
 import "../Notes/CreatedNote.css";
 import React, { useEffect, useState } from "react";
 import "../Notes/CreatedNote.css";
-
+import axios from "axios";
 function CreatedNotes() {
   const [notes, setNotes] = useState([]);
 
+
   useEffect(() => {
-    // Set data in local storage for testing purposes
-    const newNotes = [
-      {
-        id: 1,
-        title: "Personal",
-        subtitle:
-          "hey iam ajith nothing to say man alway be happy to stay every were",
-      },
-      { id: 2,
-         title: "java spring boot",
-          subtitle: "iam ok" },
-      { id: 3,
-         title: "Mern Stack",
-          subtitle: "iam ok js scripts" },
-      
-    ];
 
-    // Retrieve data from local storage
-    localStorage.setItem("notes", JSON.stringify(newNotes));
+    const fetchNotes = async () => {
+      try {
+        const userToken = localStorage.getItem("accessToken");
+        console.log(userToken)
+  
+        if (!userToken) {
+          toast.error("User token not available");
+          return;
+        }
+        console.log(userToken , 'this is token')
+       
+        const response = await axios.get( "http://localhost:9000/api/users/getNote",
+          { 
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${userToken}`,
+            }
+          }
+        );
+        console.log(response.data.notes)
+        setNotes(response.data.notes);
+      } catch (error) {
+        console.error("Error fetching notes:", error);
+      } 
+    };
 
-    // Retrieve notes from local storage
-    const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-
-    // Update state with retrieved notes
-    setNotes(storedNotes);
+    fetchNotes();
   }, []);
 
   return (
