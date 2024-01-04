@@ -5,9 +5,8 @@ import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import { Typography } from "@mui/material";
 import toast from "react-hot-toast";
-import axios from "axios";
-// import api from '/src/store/AxiosConfig.js'; 
-
+import customAxios from "../../store/AxiosConfig";
+// import api from '/src/store/AxiosConfig.js';
 
 const CreateArea = () => {
   const [showModal, setShowModal] = useState(false);
@@ -36,57 +35,34 @@ const CreateArea = () => {
     const trimmedSubtitle = subtitle.trim();
 
     if (trimmedTitle === "" || trimmedSubtitle === "") {
-      
       toast.error("Note is blank");
       return;
-    }
-     else if (trimmedTitle !== "" && trimmedSubtitle !== "") {
-
-
+    } else if (trimmedTitle !== "" && trimmedSubtitle !== "") {
       const noteData = {
         title: trimmedTitle,
         subTitle: trimmedSubtitle,
       };
+
       
-      const userToken = localStorage.getItem("accessToken");
-      console.log(userToken)
 
-      if (!userToken) {
-        toast.error("User token not available");
-        return;
+      try {
+        const response = await customAxios.post(
+          "http://localhost:9000/api/users/createNote",
+          noteData,
+        
+        );
+
+        if (response) {
+          console.log(response);
+        } else {
+          console.error("Registration failed");
+        }
+      } catch (error) {
+        toast.error(error.response.data.error);
+        console.error("Error during registration:", error);
       }
-
-      const config = {
-        headers: {
-          Authorization: `Bearer ${userToken}`,
-        },
-      };
-        console.log(config)
-        console.log(noteData)
-
-        try {
-          const response = await axios.post(
-            "http://localhost:9000/api/users/createNote",
-            noteData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${userToken}`,
-          },
-        }
-          );
-          
-          if (response) {
-            console.log(response, "hai here is the response");
-           
-    
-          } else {
-            console.error("Registration failed");
-          }
-        } catch (error) {
-          toast.error(error.response.data.error)
-          console.error("Error during registration:", error);
-        }
+      handleModalClose();
+      window.location.reload();
     }
   };
 

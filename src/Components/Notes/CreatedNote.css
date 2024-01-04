@@ -11,13 +11,14 @@
 }
 
 .note {
-    border: 1px solid #ccc;
+    border: 1px solid #716f6f;
     border-radius: 8px;
     padding: 10px;
     max-width: 300px;
     min-height: 160px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
 

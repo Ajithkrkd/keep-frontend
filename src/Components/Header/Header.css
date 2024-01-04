@@ -80,3 +80,15 @@
     cursor: pointer;
     opacity: .8;
 }
+
+.dropdown-content {
+    position: absolute;  /* or 'fixed' if you want it fixed on the viewport */
+    top: 46px;  /* Adjust this value based on your layout */
+    right: 107px; /* Adjust this value based on your layout */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width:200px;
+    z-index: 1; /* Make sure the dropdown appears above other elements */
+  }
+  
