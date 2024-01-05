@@ -33,6 +33,20 @@ function CreatedNotes() {
       console.log(response)
     }
   }
+  //Archive note
+
+  const moveNoteToArchive = async (noteId) =>{
+    try {
+
+      const response = await customAxios.post(`/users/note/archive/${noteId}`)
+        console.log(response)
+        setNotes((prevNotes) => prevNotes.filter((note) => note.noteId !== noteId));
+
+        toast.success("note archived");
+    } catch (error) {
+      console.log(response)
+    }
+  }
   
 
   return (
@@ -68,7 +82,7 @@ function CreatedNotes() {
               </li>
               <li>
                 {" "}
-                <i className="bx bx-archive"></i>{" "}
+                <i className="bx bx-archive" onClick={()=>moveNoteToArchive(note.noteId)}></i>{" "}
               </li>
               <li>
                 {" "}

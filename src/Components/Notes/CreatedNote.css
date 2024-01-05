@@ -58,7 +58,10 @@
     transform: scale(1.03);
   }
   .note:hover .iconList {
+    display: flex;
    
+  }
+  .note:hover .iconsArchiveDeleted  {
     display: flex;
    
   }
@@ -70,4 +73,24 @@
     margin-top: 20px;
     border-radius: 10px;
     width: 95%;
+  }
+
+  .iconsArchiveDeleted{
+    display: none;
+    align-items: baseline; /* Align items along the baseline */
+    margin: 0;
+    list-style: none;
+    justify-content: end;
+   
+  }
+
+  .iconsArchiveDeleted li{
+    padding: 7px;
+  }
+  .iconsArchiveDeleted li :hover{
+    background-color: rgb(224, 217, 217);
+    border-radius: 20px;
+    display: flex;
+    padding: 7px;
+    cursor: pointer;
   }

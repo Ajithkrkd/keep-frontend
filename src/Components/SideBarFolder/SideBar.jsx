@@ -56,7 +56,7 @@ function SideBar() {
                 <span class="tooltip">Edit Labels</span>
               </li>
               <li>
-                <a  onClick={()=>{navigate('/')}}>
+                <a  onClick={()=>{navigate('/archive')}}>
                   <i class="bx bx-archive btnx "></i>
                   <span class="link_name ">Archive</span>
                 </a>
