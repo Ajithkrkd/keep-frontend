@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 // import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function SideBar() {
+
+  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSideBar = () => {
@@ -14,7 +16,6 @@ function SideBar() {
   };
 
   const navigate = useNavigate();
-
   const accessToken = localStorage.getItem("accessToken");
 
   return (
@@ -32,35 +33,37 @@ function SideBar() {
           {accessToken ? (
             <>
               <li>
-                <a href="#">
+                <a onClick={()=>{navigate('/')}}>
                   <i className="bx bx-bulb btnx"></i>
-                  <span class="link_name">Notes</span>
+                  <span class="link_name">
+                    Notes
+                  </span>
                 </a>
                 <span class="tooltip">Notes</span>
               </li>
               <li>
-                <a href="#">
+                <a>
                   <i class="bx bx-bell btnx " onClick={toggleSideBar}></i>
                   <span class="link_name">Reminders</span>
                 </a>
                 <span class="tooltip">Reminders</span>
               </li>
               <li>
-                <a href="#">
+                <a >
                   <i class="bx bx-label btnx"></i>
                   <span class="link_name">Edit Labels</span>
                 </a>
                 <span class="tooltip">Edit Labels</span>
               </li>
               <li>
-                <a href="#">
+                <a  onClick={()=>{navigate('/')}}>
                   <i class="bx bx-archive btnx "></i>
                   <span class="link_name ">Archive</span>
                 </a>
                 <span class="tooltip">Archive</span>
               </li>
               <li>
-                <a href="#">
+                <a href="" onClick={()=>navigate("/bin")}>
                   <i class="bx bx-trash btnx"></i>
                   <span class="link_name">Bin</span>
                 </a>
@@ -70,21 +73,21 @@ function SideBar() {
           ) : (
             <>
               <li>
-                <a href="#" onClick={()=>navigate('/register')}>
+                <a href="#" onClick={() => navigate("/register")}>
                   <i className="bx bx-notepad btnx"></i>
                   <span class="link_name">Register</span>
                 </a>
                 <span class="tooltip">Register</span>
               </li>
               <li>
-                <a href="#" onClick={()=>navigate('/login')}>
+                <a href="#" onClick={() => navigate("/login")}>
                   <i class="bx bxs-notepad btnx " onClick={toggleSideBar}></i>
                   <span class="link_name">Login</span>
                 </a>
                 <span class="tooltip">Login</span>
               </li>
               <li>
-                <a href="#" onClick={()=>navigate('/')}>
+                <a href="#" onClick={() => navigate("/")}>
                   <i class="bx bx-edit-alt btnx " onClick={toggleSideBar}></i>
                   <span class="link_name">forgotten password</span>
                 </a>
