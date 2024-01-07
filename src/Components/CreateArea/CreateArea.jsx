@@ -69,7 +69,8 @@ const CreateArea = () => {
   return (
     <>
       <Button
-        className="createNote mt-3 mx-3"
+      style={{ marginTop: "70px" ,zIndex:100}}
+        className="createNote"
         variant="contained"
         color="primary"
         onClick={handleModalOpen}

@@ -51,7 +51,8 @@ function Login() {
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
       ></link>
-      <form className="col-6 ">
+    
+     <form className="col-6 login-form ">
         <h4 className="">Login</h4>
         <div className="form-group my-2">
           <input
@@ -79,7 +80,8 @@ function Login() {
           Login
         </button>
       </form>
-    </div>
+     </div>
+    
   );
 }
 

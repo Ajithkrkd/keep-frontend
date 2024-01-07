@@ -133,13 +133,14 @@ function SignUp() {
       console.log(" hai");
       return;
     }
+
+
     try {
       const response = await axios.post(
         "http://localhost:9000/api/auth/register",
         formData
       );
       if (response.status === 200) {
-        console.log(response, "hai here is the response");
         console.log("Registration successful");
         navigate('/login')
 

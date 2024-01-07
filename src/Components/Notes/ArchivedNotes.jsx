@@ -47,10 +47,12 @@ function ArchivedNotes() {
   }
   return (
     <div className="row notes ">
-      <h5 className="note-header btn btn-dark ">ARCHIVED NOTES</h5>
+     
 
       {notes.map((note) => (
-        <div key={note.noteId} className="   note mx-2 my-2 card w-100">
+        <div key={note.noteId} className="   note mx-2 my-2 card w-100"
+        style={{backgroundColor : note.noteColor && note.noteColor.color}}
+        >
           <div className="">
             <h4>{note.title}</h4>
           </div>

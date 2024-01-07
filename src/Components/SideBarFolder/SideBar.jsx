@@ -73,21 +73,21 @@ function SideBar() {
           ) : (
             <>
               <li>
-                <a href="#" onClick={() => navigate("/register")}>
+                <a  onClick={() => navigate("/register")}>
                   <i className="bx bx-notepad btnx"></i>
                   <span class="link_name">Register</span>
                 </a>
                 <span class="tooltip">Register</span>
               </li>
               <li>
-                <a href="#" onClick={() => navigate("/login")}>
+                <a onClick={() => navigate("/login")}>
                   <i class="bx bxs-notepad btnx " onClick={toggleSideBar}></i>
                   <span class="link_name">Login</span>
                 </a>
                 <span class="tooltip">Login</span>
               </li>
               <li>
-                <a href="#" onClick={() => navigate("/")}>
+                <a  onClick={() => navigate("/")}>
                   <i class="bx bx-edit-alt btnx " onClick={toggleSideBar}></i>
                   <span class="link_name">forgotten password</span>
                 </a>
