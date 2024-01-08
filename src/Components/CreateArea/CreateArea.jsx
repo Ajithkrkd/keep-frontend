@@ -75,7 +75,7 @@ const CreateArea = () => {
         color="primary"
         onClick={handleModalOpen}
       >
-        Create Note
+       Create a Task
       </Button>
 
       <Modal
